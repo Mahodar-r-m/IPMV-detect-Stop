@@ -31,7 +31,7 @@ import cv2
 from matplotlib import pyplot as plt 
 
 # Opening image 
-img = cv2.imread("stop6.jpg") 
+img = cv2.imread("stop5.jpg") 
 
 # OpenCV opens images as BRG 
 # but we want it as RGB We'll 
@@ -43,8 +43,7 @@ img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 # Use minSize because for not 
 # bothering with extra-small 
 # dots that would look like STOP signs 
-found = stop_data.detectMultiScale(img_gray, 
-								minSize =(50, 50)) 
+found = stop_data.detectMultiScale(img_gray,minSize =(50, 50)) 
 print(found)
 # Don't do anything if there's 
 # no sign 
